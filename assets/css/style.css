@@ -1,0 +1,113 @@
+@media(min-width:600px){
+    .top_navbar{
+        box-shadow: 0 0 50px gray !important;
+    }
+
+    #top_actions_section{
+        display: flex !important;
+        align-items: center !important;
+    }
+}
+
+.users_list_item.active .users_list_arrow_icon{
+    transform: rotate(180deg);
+}
+
+.users_list_item.active , .users_list_item.active .collapsible-header{
+    background-color: rgba(190, 185, 185, 0.322);
+}
+
+table.highlight > tbody > tr:hover {
+    background-color: #bbdefb;
+}
+
+.container{
+    width: 100% !important;
+}
+
+.add_user_modal_back{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.add_user_modal{
+    position: fixed;
+    height: 70vh;
+    background-color: white;
+    bottom: 0;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    bottom: -70vh;
+}
+.add_user_modal.show{
+    box-shadow: 0 0 10px blue;
+    bottom: 0;
+}
+
+.user_list_section{
+    height: calc(100vh - 258px);
+    overflow: auto;
+}
+
+.page_number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+}
+
+#install-prompt{
+    position: fixed;
+    bottom: -55px;
+    width: 100%;
+    text-align: center;
+    background: #286bb8;
+    padding: 15px;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 200ms ease;
+}
+
+#install-prompt.show{
+    bottom: 0;
+}
+
+@keyframes rotate_bell {
+    0%   {transform: rotate(20deg);}
+    50%  {transform: rotate(-20deg);}
+    100%  {transform: rotate(20deg);}
+  }
+
+#notification_bell_box{
+    position: fixed;
+    bottom: 66px;
+    right: 14px;
+}
+
+#notification_bell_box i{
+    color: #286bb8;
+    font-size: 5rem;
+    animation-name: rotate_bell;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+#network_status{
+    position: fixed;
+    top: 14px;
+    right: 14px;
+}
+
+#media_player{
+    max-width: 500px !important;
+}
+
