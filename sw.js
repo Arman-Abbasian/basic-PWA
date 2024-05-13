@@ -148,8 +148,14 @@ self.addEventListener("push", (event) => {
     dir: "ltr",
     vibrate: [100, 50, 200],
     badge: "/assets/images/codeyadIcon.png",
+    //you can make group for each category of your notification
     tag: "group1",
+    //when you send a notification then the user system make a vibrate
+    //when you send a false notif and again revise it and send a new one
+    //the user system again make a vibrate
     renotify: true,
+    //this is related to the button that make eccessive actions and we manage them in -
+    //notificationclick event
     actions: [
       { action: "confirm", title: "تایید", icon: "/assets/images/confirm.png" },
       { action: "cancel", title: "انصراف", icon: "/assets/images/cancel.png" },
@@ -158,6 +164,7 @@ self.addEventListener("push", (event) => {
       notifUrl: notification.url,
     },
   };
+  //this method handle the Appearance of notification
   self.registration.showNotification(notification.title, options);
 });
 

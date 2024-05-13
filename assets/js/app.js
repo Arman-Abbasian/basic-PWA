@@ -82,7 +82,9 @@ if (Notification.permission == "default") {
 }
 
 const showConfirmNotify = () => {
+  //if service worker registerd
   if ("serviceWorker" in navigator) {
+    //when serviceworker was ready
     navigator.serviceWorker.ready.then((sw) => {
       sw.showNotification("ممنون از شما...!");
       sw.pushManager
