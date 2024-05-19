@@ -17,7 +17,9 @@ navigator.sayswho = () => {
   M = M ? [M[1], M[2]] : [N, Navigator.appVersion, "-?"];
   return M.join(" ");
 };
-//if (!navigator.sayswho().includes("Chrome")) alert("لطفا از مرورگر کروم استفاده کنید")
+//this function check if the kind of browser be chrome
+if (!navigator.sayswho().includes("Chrome"))
+  alert("لطفا از مرورگر کروم استفاده کنید");
 
 // install prompt-------------
 var deferredPrompt;
