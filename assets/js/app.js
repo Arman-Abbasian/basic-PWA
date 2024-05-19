@@ -138,8 +138,10 @@ const setnetworkStatus = (status) => {
   }
 };
 
+//this action run at the mounting of the page
 if (navigator.onLine) setnetworkStatus(1);
 else setnetworkStatus(0);
 
+//this action run every time
 window.addEventListener("online", () => setnetworkStatus(1));
 window.addEventListener("offline", () => setnetworkStatus(0));
